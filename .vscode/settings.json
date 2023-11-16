@@ -58,8 +58,6 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "*.c": "c",
-    "mochila.h": "c",
-    "stdio.h": "c",
-    "pokedex.h": "c"
+    "lerarq.h": "c"
   }
 }

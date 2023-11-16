@@ -4,7 +4,11 @@
             "name": "windows-gcc-x86",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/main/poke/mochi/cole/pmon/lerarq"
+                "${workspaceFolder}/.vscode/main/poke/mochi/cole/pmon/lerarq",
+                "${workspaceFolder}/.vscode/main/poke/mochi/cole/pmon",
+                "${workspaceFolder}/.vscode/main/poke/mochi/cole",
+                "${workspaceFolder}/.vscode/main/poke",
+                "${workspaceFolder}/.vscode/main/poke/mochi"
             ],
             "compilerPath": "C:/MinGW/bin/gcc.exe",
             "cStandard": "${default}",

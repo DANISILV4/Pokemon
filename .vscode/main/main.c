@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lerarq.h"
-#include "pokemon.h"
-#include "colecao.h"
-#include "mochila.h"
 #include "pokedex.h"
+#include "colecao.h"
+#include "pokedex.h"
+#include "mochila.h"
 
 int main() {
     Pokedex *dex = NULL;
@@ -31,7 +31,7 @@ int main() {
                 listarPokemonMochila(&mochila);
                 break;
             case 3:
-                listarPokemonColecao(dex, &colecao);
+                listarPokemonColecao(dex,&colecao);
                 break;
             case 4:
                 printf("Saindo do programa...\n");

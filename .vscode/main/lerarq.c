@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "lerarq.h"
 
+
 void recebeArquivodados(Pokemon **dex, int *quantidadePokemon) {
     char linha[500];
     FILE *arq = fopen("dados.csv", "r");

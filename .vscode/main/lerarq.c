@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lerarq.h"
-
+#include "pokemon.h"
 
 void recebeArquivodados(Pokemon **dex, int *quantidadePokemon) {
     char linha[500];
-    FILE *arq = fopen("dados.csv", "r");
+    FILE *arq = fopen("pokedex.csv", "r");
 
     if (arq == NULL) {
         printf("Erro ao abrir o arquivo.\n");
@@ -32,7 +31,7 @@ void recebeArquivodados(Pokemon **dex, int *quantidadePokemon) {
 
     int i = 0;
     while (i < *quantidadePokemon && fgets(linha, sizeof(linha), arq) != NULL) {
-        sscanf(linha, "%d ,%19[^,] ,%9[^,] ,%9[^,] ,%d ,%d ,%d ,%d ,%d ,%d ,%d ,%d ,%d ,%19[^,] ,%f ,%f ,%d",
+        sscanf(linha, "%d ,%29[^,] ,%14[^,] ,%14[^,] ,%d ,%f ,%d ,%d ,%d ,%d ,%d ,%d ,%d ,%d ,%14[^,] ,%f ,%f ,%d",
                &(*dex)[i].numero, (*dex)[i].nome, (*dex)[i].tipo1, (*dex)[i].tipo2, &(*dex)[i].total,
                &(*dex)[i].hp, &(*dex)[i].ataque, &(*dex)[i].defesa, &(*dex)[i].ataque_especial,
                &(*dex)[i].defesa_especial, &(*dex)[i].velocidade, &(*dex)[i].geracao, &(*dex)[i].lendario,

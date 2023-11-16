@@ -21,4 +21,4 @@ void exibirPokemon(Pokemon *p) {
     printf("Taxa de Captura: %d\n", p->taxa_captura);
     printf("Próxima Evolução: %d\n", p->proxima_evolucao);
     printf("Pré-Evolução: %d\n", p->pre_evolucao);
-}
+};

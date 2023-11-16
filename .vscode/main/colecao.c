@@ -17,7 +17,16 @@ void realocarMemoria(Colecao *colecao, int novoTamanho) {
     }
 }
 
-void cadastrarPokemon(Colecao *colecao, int numeroPokemon) {
+void cadastrarPokemon(Colecao *colecao, int numeroPokemon) {gcc -Wall -Wextra -g3 \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\main.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\menuMochila.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\menuColecao.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\menuPokedex.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\mochila.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\colecao.c" \
+    "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\pokedex.c" \
+    -o "c:\\Users\\danij\\OneDrive\\Área de Trabalho\\porra\\.vscode\\main\\output\\main.exe"
+
     // Verificar se o Pokemon já está na coleção
     if (pesquisarPokemon(colecao, numeroPokemon) != -1) {
         printf("Pokemon já está na coleção.\n");

@@ -1,37 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lerarq.h"
-#include "pokedex.h"
 #include "colecao.h"
 #include "pokedex.h"
 #include "mochila.h"
+#include "menuMochila.h"
+#include "menuColecao.h"
+#include "menuPokedex.h"
 
-int main() {
-    Pokedex *dex = NULL;
-    Mochila mochila;
-    Colecao colecao;
-
-    int quantidadePokemon = 0;
-    recebeArquivodados(&dex, &quantidadePokemon);
-
-    inicializaMochila(&mochila);
-    inicializaColecao(&colecao);
-
+void exibirMenuPrincipal(Mochila *mochila, Colecao *colecao, Pokedex *dex) {
     int escolha;
     do {
-        exibeMenu();
+        // Exibe o menu principal
+        printf("\n----- Menu Principal -----\n");
+        printf("1. Mochila\n");
+        printf("2. Colecao\n");
+        printf("3. Pokedex\n");
+        printf("4. Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &escolha);
 
+        // Chama a função correspondente com base na escolha do usuário
         switch (escolha) {
             case 1:
-                capturarPokemon(&mochila, &colecao, dex, quantidadePokemon);
+                exibirSubMenuMochila(mochila,dex);
                 break;
             case 2:
-                listarPokemonMochila(&mochila);
+                exibirSubMenuColecao(colecao);
                 break;
             case 3:
-                listarPokemonColecao(dex,&colecao);
+                exibirSubMenuPokedex(dex);
                 break;
             case 4:
                 printf("Saindo do programa...\n");
@@ -40,12 +38,17 @@ int main() {
                 printf("Opção inválida. Tente novamente.\n");
         }
     } while (escolha != 4);
+}
 
-    // Liberar a memória alocada para a Pokedex
-    liberaMemoria(dex);
+int main() {
+    Pokedex *dex = NULL;
+    Mochila mochila;
+    Colecao colecao;
 
-    // Liberar a memória alocada para a coleção
-    liberaColecao(&colecao);
+    
+    exibirMenuPrincipal(&mochila, &colecao, dex);
+
+  
 
     return 0;
 }

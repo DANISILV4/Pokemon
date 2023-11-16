@@ -1,7 +1,9 @@
 // pokedex.c
-#include "pokedex.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "pokedex.h"
+#include "pokemon.h"
+
 
 void inicializarPokedex(Pokedex *pokedex) {
     pokedex->pokemons = NULL;

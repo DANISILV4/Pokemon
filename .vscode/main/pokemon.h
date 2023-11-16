@@ -1,4 +1,6 @@
 // pokemon.h
+#include <stdio.h>
+#include <stdlib.h>
 
 #ifndef POKEMON_H
 #define POKEMON_H
@@ -24,5 +26,5 @@ typedef struct {
     int proxima_evolucao;
     int pre_evolucao;
 } Pokemon;
-
+void exibirPokemon(Pokemon *p);
 #endif  // POKEMON_H
